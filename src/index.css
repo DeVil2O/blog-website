@@ -3,6 +3,7 @@
 @theme {
   --font-primary: "Satoshi-Regular", "sans-serif";
   --font-secondary: "IBM Plex Mono", "serif";
+  --font-Inter: "Inter", "serif";
   
   --breakpoint-3xl: 1920px;
   --color-avocado-100: oklch(0.99 0 0);

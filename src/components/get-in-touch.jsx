@@ -4,14 +4,9 @@ const GetInTouch = () => {
     const [formData, setFormData] = useState({
         fullName: "",
         email: "",
+        phone: "",
         about: "",
-        eventName: "",
         websiteLink: "",
-        ctfLink: "",
-        pastEventLink: "",
-        pastEventAttendees: "",
-        expectedAttendees: "",
-        eventDates: "",
         socialMediaLinks: "",
       });
     
@@ -26,7 +21,7 @@ const GetInTouch = () => {
       };
     
   return (
-    <div className="h-full flex flex-col items-center bg-white bg-grid font-primary">
+    <div className="h-full min-h-screen flex flex-col items-center bg-white bg-grid font-primary">
       <div className="text-[3.5rem] w-full flex justify-center text-center mt-7">
         <div className="w-4/5 text-center">
           <div className="font-bold">Get in Touch</div>
@@ -45,7 +40,7 @@ const GetInTouch = () => {
         </p>
         <form
         onSubmit={handleSubmit}
-        className="p-6 rounded-lg shadow-md w-full max-w-lg"
+        className="p-6 w-full max-w-lg"
       >
 
         <input
@@ -68,6 +63,16 @@ const GetInTouch = () => {
           required
         />
 
+<input
+          type="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          placeholder="Enter your phone"
+          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
+          required
+        />
+
         <select
           name="about"
           value={formData.about}
@@ -82,64 +87,11 @@ const GetInTouch = () => {
         </select>
 
         <input
-          type="text"
-          name="eventName"
-          value={formData.eventName}
-          onChange={handleChange}
-          placeholder="Enter event or community name"
-          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
-        />
-
-        <input
           type="url"
           name="websiteLink"
           value={formData.websiteLink}
           onChange={handleChange}
           placeholder="Enter website link"
-          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
-        />
-
-        <input
-          type="url"
-          name="ctfLink"
-          value={formData.ctfLink}
-          onChange={handleChange}
-          placeholder="Enter CTF time link"
-          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
-        />
-
-        <input
-          type="url"
-          name="pastEventLink"
-          value={formData.pastEventLink}
-          onChange={handleChange}
-          placeholder="Enter past event link"
-          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
-        />
-
-        <input
-          type="text"
-          name="pastEventAttendees"
-          value={formData.pastEventAttendees}
-          onChange={handleChange}
-          placeholder="Enter number of past attendees"
-          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
-        />
-
-        <input
-          type="number"
-          name="expectedAttendees"
-          value={formData.expectedAttendees}
-          onChange={handleChange}
-          placeholder="Enter expected attendees"
-          className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
-        />
-
-        <input
-          type="date"
-          name="eventDates"
-          value={formData.eventDates}
-          onChange={handleChange}
           className="w-full p-2 mb-4 rounded border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
         />
 
